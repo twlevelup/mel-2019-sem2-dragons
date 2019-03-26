@@ -22,3 +22,9 @@ dist/
 public/
 build/
 coverage/
+
+#ignore lock file. This isn't best practice, but it makes the 
+# gitpod tutorial easier
+
+*/package-lock.json
+
