@@ -1,2 +1,3 @@
-@import './styles/pages/home.css';
-@import 'map.css';
+#watch {
+  color: #fff;
+}
