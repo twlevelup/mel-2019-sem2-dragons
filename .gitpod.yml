@@ -1,4 +1,4 @@
-image: node:11.10.1-alpine
+image: node:11.15.0-alpine
 ports:
 - port: 8080
 
