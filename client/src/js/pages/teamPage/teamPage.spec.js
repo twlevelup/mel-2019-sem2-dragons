@@ -13,18 +13,15 @@ describe("TeamPage", () => {
       expect(page.render()).toContain("<h1>Made by:</h1>");
     });
 
-<<<<<<< HEAD
     it('should contain team members name', () => {
       const page = new TeamPage();
       expect(page.render()).toContain("Martin");
     })
-=======
      it('should contain team members names', () => {
       const page = new TeamPage();
       expect(page.render()).toContain("Abby");
 
     });
->>>>>>> Abby - add myname in teamPage
   });
 
   it("should contain team members names", () => {
