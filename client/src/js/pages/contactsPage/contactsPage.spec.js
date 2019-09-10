@@ -1,6 +1,6 @@
 const ContactsPage = require('./contactsPage');
 const StorageHub = require('watch-framework').StorageHub;
-const HomePage = require('../homePage/homePage');
+
 
 describe('ContactsPage', () => {
   let watchFace;

@@ -1,5 +1,5 @@
 const DemoPage = require('./demoPage');
-const HomePage = require('../homePage/homePage');
+
 
 describe('The Demo Page', () => {
   let watchFace;

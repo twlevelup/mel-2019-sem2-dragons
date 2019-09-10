@@ -1,5 +1,6 @@
 const FourOhFourPage = require('./404Page');
 
+
 describe('404Page', () => {
   let watchFace;
 
@@ -52,6 +53,18 @@ describe('404Page', () => {
       spyOn(page, 'navigate');
 
       page.bottomButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
+  describe('#bottomButtonEventDoubleClick', () => {
+    it('should take user to the homepage', () => {
+      const props = {
+        navigate: () => {},
+      };
+      const page = new FourOhFourPage(props);
+      spyOn(page, 'navigate');
+      
+      page.bottomButtonEventDoubleClick();
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });

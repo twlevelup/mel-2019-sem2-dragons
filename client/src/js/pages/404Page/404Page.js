@@ -15,6 +15,11 @@ class FourOhFourPage extends BasePage {
   bottomButtonEvent() {
     this.navigate('/');
   }
+
+  bottomButtonEventDoubleClick() {
+    this.navigate('/');
+  }
+
 }
 
 module.exports = FourOhFourPage;
