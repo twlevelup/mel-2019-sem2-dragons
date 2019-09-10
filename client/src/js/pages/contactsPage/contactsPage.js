@@ -11,6 +11,10 @@ class ContactsPage extends BasePage {
   leftButtonEvent() {
     this.navigate('/');
   }
+
+  bottomButtonEventDoubleClick() {
+    this.navigate('/');
+  }
 }
 
 module.exports = ContactsPage;

@@ -1,5 +1,6 @@
 const ContactsPage = require('./contactsPage');
 const StorageHub = require('watch-framework').StorageHub;
+const HomePage = require('../homePage/homePage');
 
 describe('ContactsPage', () => {
   let watchFace;
@@ -27,6 +28,20 @@ describe('ContactsPage', () => {
       spyOn(page, 'navigate');
 
       page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
+
+
+  describe('#bottomButtonEventDoubleClick', () => {
+    it('should take user to the homepage', () => {
+      const props = {
+        navigate: () => {},
+      };
+      const page = new ContactsPage(props);
+      spyOn(page, 'navigate');
+
+      page.bottomButtonEventDoubleClick();
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
