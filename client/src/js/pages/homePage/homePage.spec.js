@@ -19,11 +19,22 @@ describe("HomePage", () => {
   });
 
   describe("#render", () => {
-    it("should render my page correctly", () => {
+    it("should render the username", () => {
       const page = new HomePage();
-      expect(page.render()).toContain("<div>Hello, World!</div>");
+      expect(page.render()).toContain("<div><h1>Hello, KIDDO!</h1></div>");
     });
   });
+
+  
+
+  describe("#render", () => {
+    it("should render the cute character", () => {
+      const page = new HomePage();
+      const string =
+      expect(page.render()).toContain(`<img src="../../../images/donutcat.gif" height="100">`);
+    });
+  });
+
 
   describe("#leftButtonEvent", () => {
     it("audioHub plays a sound", () => {
