@@ -25,16 +25,14 @@ describe("HomePage", () => {
     });
   });
 
-  
-
   describe("#render", () => {
     it("should render the cute character", () => {
       const page = new HomePage();
-      const string =
-      expect(page.render()).toContain(`<img src="../../../images/donutcat.gif" height="100">`);
+      const string = expect(page.render()).toContain(
+        `<img src="../../../images/donutcat.gif" height="100">`
+      );
     });
   });
-
 
   describe("#leftButtonEvent", () => {
     it("audioHub plays a sound", () => {
@@ -137,5 +135,14 @@ describe("HomePage", () => {
 
       expect(page.updateTimeDisplay).toHaveBeenCalledTimes(3);
     });
+  });
+
+  describe("#getDateTime", () => {
+    it("Get time should return 12 hour format without seconds",()=>{
+      const page = new HomePage();
+      const dateTime =page.getDateTime();
+      expect(dateTime.time).toMatch(/((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/);
+    })
+    
   });
 });

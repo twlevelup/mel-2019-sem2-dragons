@@ -1,19 +1,19 @@
-const BasePage = require('watch-framework').BasePage;
-const StorageHub = require('watch-framework').StorageHub;
-const AudioHub = require('watch-framework').AudioHub;
-const logo = require('../../../images/logo.png');
-const plop = './sounds/plop.mp3';
+const BasePage = require("watch-framework").BasePage;
+const StorageHub = require("watch-framework").StorageHub;
+const AudioHub = require("watch-framework").AudioHub;
+const logo = require("../../../images/logo.png");
+const plop = "./sounds/plop.mp3";
 
 //test for raspberrypi
 class HomePage extends BasePage {
-  template = require('./homePage.hbs');
+  template = require("./homePage.hbs");
 
   pageWillLoad() {
-    StorageHub.setData('contacts', [
-      { name: 'Ray', phoneNumber: '0431 111 111' },
-      { name: 'Sinan', phoneNumber: '0431 222 222' },
-      { name: 'Jafari', phoneNumber: '0431 333 333' },
-    ])
+    StorageHub.setData("contacts", [
+      { name: "Ray", phoneNumber: "0431 111 111" },
+      { name: "Sinan", phoneNumber: "0431 222 222" },
+      { name: "Jafari", phoneNumber: "0431 333 333" }
+    ]);
 
     this.updateTimeEverySecond();
     const dateTime = this.getDateTime();
@@ -23,10 +23,11 @@ class HomePage extends BasePage {
   }
 
   getDateTime() {
-    const dateTime = new Date(Date.now()).toLocaleString('en-AU').split(",");
+    const dateTime = new Date(Date.now()).toLocaleString("en-AU").split(",");
+    const time = dateTime[1];
     return {
       date: dateTime[0],
-      time: dateTime[1],
+      time: time.slice(0,-6) + " " + time.slice(-2),
     };
   }
 
@@ -42,7 +43,7 @@ class HomePage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('contacts');
+    this.navigate("contacts");
   }
 
   leftButtonEvent() {
@@ -57,8 +58,8 @@ class HomePage extends BasePage {
     this.watchFace.scrollTop += 40;
   }
 
-    faceButtonEvent() {
-    this.navigate('demo');
+  faceButtonEvent() {
+    this.navigate("demo");
   }
 }
 
