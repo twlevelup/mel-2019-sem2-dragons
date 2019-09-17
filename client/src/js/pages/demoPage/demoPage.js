@@ -1,11 +1,8 @@
-const BasePage = require('watch-framework').BasePage;
+const BasePage = require('../customBasePage/CustomBasePage');
 
 class DemoPage extends BasePage {
   template = require('./demoPage.hbs');
 
-  bottomButtonEventDoubleClick() {
-    this.navigate('/');
-  }
 }
 
 module.exports = DemoPage;

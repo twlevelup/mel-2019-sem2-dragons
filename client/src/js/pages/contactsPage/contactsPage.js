@@ -1,4 +1,4 @@
-const BasePage = require('watch-framework').BasePage;
+const BasePage = require('../customBasePage/CustomBasePage');
 const StorageHub = require('watch-framework').StorageHub;
 
 class ContactsPage extends BasePage {
@@ -12,9 +12,6 @@ class ContactsPage extends BasePage {
     this.navigate('/');
   }
 
-  bottomButtonEventDoubleClick() {
-    this.navigate('/');
-  }
 }
 
 module.exports = ContactsPage;
