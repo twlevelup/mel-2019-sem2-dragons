@@ -56,16 +56,4 @@ describe('404Page', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
-  describe('#bottomButtonEventDoubleClick', () => {
-    it('should take user to the homepage', () => {
-      const props = {
-        navigate: () => {},
-      };
-      const page = new FourOhFourPage(props);
-      spyOn(page, 'navigate');
-      
-      page.bottomButtonEventDoubleClick();
-      expect(page.navigate).toHaveBeenCalledWith('/');
-    });
-  });
 });

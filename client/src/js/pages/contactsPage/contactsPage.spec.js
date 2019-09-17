@@ -31,18 +31,4 @@ describe('ContactsPage', () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
-
-
-  describe('#bottomButtonEventDoubleClick', () => {
-    it('should take user to the homepage', () => {
-      const props = {
-        navigate: () => {},
-      };
-      const page = new ContactsPage(props);
-      spyOn(page, 'navigate');
-
-      page.bottomButtonEventDoubleClick();
-      expect(page.navigate).toHaveBeenCalledWith('/');
-    });
-  });
 });

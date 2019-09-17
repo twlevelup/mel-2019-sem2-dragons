@@ -14,17 +14,4 @@ describe('The Demo Page', () => {
       expect(page.render()).toContain('This is a demo');
     });
   });
-
-  describe('#bottomButtonEventDoubleClick', () => {
-    it('should take user to the homepage', () => {
-      const props = {
-        navigate: () => {},
-      };
-      const page = new DemoPage(props);
-      spyOn(page, 'navigate');
-      
-      page.bottomButtonEventDoubleClick();
-      expect(page.navigate).toHaveBeenCalledWith('/');
-    });
-  });
 });
