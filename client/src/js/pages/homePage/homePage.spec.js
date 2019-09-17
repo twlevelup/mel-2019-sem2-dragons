@@ -21,7 +21,7 @@ describe("HomePage", () => {
   describe("#render", () => {
     it("should render the username", () => {
       const page = new HomePage();
-      expect(page.render()).toContain("<div><h1>Hello, KIDDO!</h1></div>");
+      expect(page.render()).toContain("<h1>Hello, KIDDO!</h1>");
     });
   });
 
