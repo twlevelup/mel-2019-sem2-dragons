@@ -2,9 +2,9 @@ const failurePage = require("./failurePage");
 const AudioHub = require('watch-framework').AudioHub
 
 describe("#failure", () => {
-  it("should render the star png", () => {
+  it("should render the sad-face png", () => {
     const result = new failurePage();
-    expect(result.render()).toContain(`<img src="../../../images/star.png" height="100">`);
+    expect(result.render()).toContain(`<img src="../../../images/sad-face.png" height="100">`);
   });
 });
 

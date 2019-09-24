@@ -4,7 +4,7 @@ const AudioHub = require("watch-framework").AudioHub;
 const failureSound = "../../../sounds/failure-sound.mp3"
 
 class FailureSound extends BasePage {
-  template = require('./failureSound.hbs');
+  template = require('./failurePage.hbs');
   playSound() {
     AudioHub.playSound(failureSound);
   }
