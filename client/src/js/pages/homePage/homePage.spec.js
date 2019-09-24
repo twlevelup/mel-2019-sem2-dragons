@@ -21,7 +21,7 @@ describe("HomePage", () => {
   describe("#render", () => {
     it("should render the username", () => {
       const page = new HomePage();
-      expect(page.render()).toContain("<div><h1>Hello, KIDDO!</h1></div>");
+      expect(page.render()).toContain(`<h1>Hello, Kiddo!</h1>`);
     });
   });
 
@@ -135,14 +135,5 @@ describe("HomePage", () => {
 
       expect(page.updateTimeDisplay).toHaveBeenCalledTimes(3);
     });
-  });
-
-  describe("#getDateTime", () => {
-    it("Get time should return 12 hour format without seconds",()=>{
-      const page = new HomePage();
-      const dateTime =page.getDateTime();
-      expect(dateTime.time).toMatch(/((1[0-2]|0?[1-9]):([0-5][0-9]) ?([AaPp][Mm]))/);
-    })
-    
   });
 });

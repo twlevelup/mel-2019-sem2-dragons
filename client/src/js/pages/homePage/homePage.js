@@ -23,11 +23,19 @@ class HomePage extends BasePage {
   }
 
   getDateTime() {
-    const dateTime = new Date(Date.now()).toLocaleString("en-AU").split(",");
-    const time = dateTime[1];
+    const date = new Date(Date.now());
+    const dateTime = date.toLocaleString("en-AU").split(",")[0];
+    const timeHour = date
+      .toLocaleDateString("en-AU", {
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false
+      })
+      .split(", ")[1];
+
     return {
-      date: dateTime[0],
-      time: time.slice(0,-6) + " " + time.slice(-2),
+      date: dateTime,
+      time: timeHour
     };
   }
 

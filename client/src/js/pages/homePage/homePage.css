@@ -1,3 +1,19 @@
 #home {
   font-style: italic;
 }
+
+#home h1 {
+  text-align: center;
+}
+
+#home img {
+  display: inline;
+}
+
+#clock {
+  float: right;
+}
+
+#home-bottom {
+  margin-top: 50px;
+}
