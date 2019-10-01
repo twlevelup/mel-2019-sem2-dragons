@@ -4,7 +4,7 @@ const AudioHub = require('watch-framework').AudioHub
 describe("#success", () => {
   it("should render the happy face png", () => {
     const result = new successPage();
-    expect(result.render()).toContain(`<img src="../../../images/happy-face.png" height="100">`);
+    expect(result.render()).toContain(`<img id="img" src="../../../images/happy-face.png" height="100">`);
   });
 });
 
@@ -15,4 +15,5 @@ describe("#success sound", () => {
     page.playSound();
     expect(AudioHub.playSound).toHaveBeenCalledTimes(1);
   });
+
 });

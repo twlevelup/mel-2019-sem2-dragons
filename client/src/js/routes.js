@@ -12,5 +12,6 @@ module.exports = {
   'team': TeamPage,
   '404': FourOhFour,
   'demo': DemoPage,
-  'success': SuccessPage
+  'success': SuccessPage,
+  'failure': failurePage
 };

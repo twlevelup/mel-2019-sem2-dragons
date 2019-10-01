@@ -15,6 +15,7 @@ class BasePage {
   }
 
   pageWillLoad() {
+    
   }
 
   render() {
