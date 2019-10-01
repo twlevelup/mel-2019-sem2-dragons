@@ -16,30 +16,73 @@ class IdentifyNumberPage extends BasePage {
 
 	pageWillLoad() {
 		const numbers = this.getSoundNumberPair();
-
+		this.chosenValue = numbers.chosenValue;
 		this.left = numbers.left.num;
 		this.right = numbers.right.num;
+		this.soundLeft = numbers.left.sound;
+		this.soundRight = numbers.right.sound;
+	}
+
+	pageDidLoad() {
+		this.topButtonEvent();
 	}
 
 	getSoundNumberPair() {
+		var chosenValue = Math.random() >= 0.5 ? 'left' : 'right';
 		const sounds = [ audio0, audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8, audio9 ];
-		let numLeft = Math.floor(Math.random() * 10);
-		let numRight = Math.floor(Math.random() * 10);
-
-		function playSound(sound) {
-			AudioHub.playSound(sound);
+		const numbers_arr = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ];
+		function shuffle(o) {
+			for (let j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+			return o;
 		}
+		let random = shuffle(numbers_arr);
+
+		let numLeft = random.shift();
+		let numRight = random.shift();
+
+		// function playSound(chosenValue) {
+		// 	if (chosenValue === 'left') {
+		// 		AudioHub.playSound(sounds[numLeft]);
+		// 	} else {
+		// 		AudioHub.playSound(sounds[numRight]);
+		// 	}
+		// }
+		// playSound(chosenValue);
 
 		return {
 			left: {
 				num: numLeft,
-				sound: playSound(sounds[numLeft])
+				sound: sounds[numLeft]
 			},
 			right: {
 				num: numRight,
-				sound: playSound(sounds[numRight])
-			}
+				sound: sounds[numRight]
+			},
+			chosenValue: chosenValue
 		};
+	}
+
+	topButtonEvent() {
+		if (this.chosenValue === 'left') {
+			AudioHub.playSound(this.soundLeft);
+		} else {
+			AudioHub.playSound(this.soundRight);
+		}
+	}
+	rightButtonEvent() {
+		if (this.chosenValue === 'right') {
+			this.navigate('success');
+		} else {
+			this.navigate('failure');
+		}
+	}
+
+	leftButtonEvent() {
+		if (this.chosenValue === 'left') {
+			this.navigate('success');
+		} else {
+			this.navigate('failure');
+		}
 	}
 }
 

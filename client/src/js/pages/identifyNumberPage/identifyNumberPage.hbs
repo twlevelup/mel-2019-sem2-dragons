@@ -1,12 +1,12 @@
 <style>
     
-    .leftChoice{
+    #leftChoice{
         width:49%;
         background-color:cadetblue;
         height:240px;
         display: inline-block;
     }
-    .rightChoice{
+    #rightChoice{
         width:49%;
         background-color:cadetblue;
         height:240px;
@@ -14,20 +14,20 @@
         display: inline-block;
     }
 
-    .rightChoice h1, .leftChoice h1{
+    .choice h1{
         margin: auto;
-    }
-
-    .row{
-        background-color: black;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 80px
     }
 </style>
 
-<div class="row">
-    <div class="leftChoice">
-        <h1>{{left}}</h1>
-    </div>
-    <div class="rightChoice">
-        <h1>{{right}}</h1>
-    </div>
+<div id="leftChoice" class="choice">
+    <h1>{{left}}</h1>
+</div>
+<div id="rightChoice" class="choice">
+    <h1>{{right}}</h1>
 </div>
