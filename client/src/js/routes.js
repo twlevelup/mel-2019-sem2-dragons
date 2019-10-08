@@ -7,10 +7,7 @@ const IdentifyNumberPage = require('./pages/identifyNumberPage/identifyNumberPag
 
 module.exports = {
 	'/': HomePage,
-	contacts: ContactsPage,
-	team: TeamPage,
 	'404': FourOhFour,
-	demo: DemoPage,
 	success: SuccessPage,
 	failure: failurePage,
 	final: finalPage,
