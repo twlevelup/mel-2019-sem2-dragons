@@ -1,0 +1,33 @@
+<style>
+    
+    #leftChoice{
+        width:49%;
+        background-color:cadetblue;
+        height:240px;
+        display: inline-block;
+    }
+    #rightChoice{
+        width:49%;
+        background-color:cadetblue;
+        height:240px;
+        float: right;
+        display: inline-block;
+    }
+
+    .choice h1{
+        margin: auto;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        font-size: 80px
+    }
+</style>
+
+<div id="leftChoice" class="choice">
+    <h1>{{left}}</h1>
+</div>
+<div id="rightChoice" class="choice">
+    <h1>{{right}}</h1>
+</div>

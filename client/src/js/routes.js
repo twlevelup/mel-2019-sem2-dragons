@@ -6,6 +6,7 @@ const DemoPage = require('./pages/demoPage/demoPage');
 const SuccessPage = require('./pages/successPage/successPage');
 const failurePage = require('./pages/failurePage/failurePage');
 const finalPage = require('./pages/finalPage/finalPage')
+const IdentifyNumberPage = require('./pages/identifyNumberPage/identifyNumberPage');
 
 module.exports = {
   '/': HomePage,
@@ -16,4 +17,5 @@ module.exports = {
   'success': SuccessPage,
   'failure': failurePage,
   'final': finalPage
+	'identifyNumber': IdentifyNumberPage
 };
