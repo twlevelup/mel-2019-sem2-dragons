@@ -58,10 +58,6 @@ class HomePage extends BasePage {
     }
   }
 
-  rightButtonEvent() {
-    this.navigate('contacts');
-  }
-
   leftButtonEvent() {
     AudioHub.playSound(plop);
   }

@@ -3,10 +3,10 @@ const AudioHub = require("watch-framework").AudioHub;
 const StorageHub = require('watch-framework').StorageHub;
 
 
-const successSound = "../../../sounds/success-sound.mp3"
+const successSound = '../../../sounds/success-sound.mp3';
 
 class SuccessPage extends BasePage {
-  template = require('./successPage.hbs');
+	template = require('./successPage.hbs');
 
   playSound() {
     AudioHub.playSound(successSound);
