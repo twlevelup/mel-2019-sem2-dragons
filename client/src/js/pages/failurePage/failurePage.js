@@ -12,7 +12,12 @@ class FailurePage extends BasePage {
 
 	pageDidLoad() {
 		this.playSound();
-	}
+  }
+  
+  faceButtonEvent()
+  {
+    this.navigate('identifyNumber');
+  }
 }
 
 module.exports = FailurePage;
