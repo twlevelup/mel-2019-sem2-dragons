@@ -16,6 +16,6 @@ module.exports = {
   'demo': DemoPage,
   'success': SuccessPage,
   'failure': failurePage,
-  'final': finalPage
-	'identifyNumber': IdentifyNumberPage
+  'final': finalPage,
+  'identifyNumber': IdentifyNumberPage
 };
