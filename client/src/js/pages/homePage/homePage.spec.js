@@ -41,20 +41,6 @@ describe('HomePage', () => {
 		});
 	});
 
-	describe('#faceButtonEvent', () => {
-		it('should take the user to the demo page', () => {
-			const props = {
-				navigate: () => {}
-			};
-
-			const page = new HomePage(props);
-			spyOn(page, 'navigate');
-
-			page.faceButtonEvent();
-			expect(page.navigate).toHaveBeenCalledWith('demo');
-		});
-	});
-
 	describe('#rightButtonEvent', () => {
 		it('goes to contacts page', () => {
 			const page = new HomePage();
@@ -65,28 +51,9 @@ describe('HomePage', () => {
 		});
 	});
 
-	describe('#bottomButtonEvent', () => {
-		it('scrolls page down', () => {
-			const page = new HomePage({ watchFace });
-
-			page.bottomButtonEvent();
-
-			expect(watchFace.scrollTop).toEqual(40);
-		});
-	});
-
-	describe('#topButtonEvent', () => {
-		it('scrolls page up', () => {
-			const page = new HomePage({ watchFace });
-
-			page.topButtonEvent();
-
-			expect(watchFace.scrollTop).toEqual(-40);
-		});
-	});
 
 	describe('#faceButtonEvent', () => {
-		it('should take the user to the demo page', () => {
+		it('should take the user to the game', () => {
 			const props = {
 				navigate: () => {}
 			};
@@ -95,7 +62,7 @@ describe('HomePage', () => {
 			spyOn(page, 'navigate');
 
 			page.faceButtonEvent();
-			expect(page.navigate).toHaveBeenCalledWith('demo');
+			expect(page.navigate).toHaveBeenCalledWith('identifyNumber');
 		});
 	});
 
