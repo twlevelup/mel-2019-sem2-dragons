@@ -1,20 +1,20 @@
 <style>
-    
-    #leftChoice{
-        width:49%;
-        background-color:cadetblue;
-        height:240px;
+    #leftChoice {
+        width: 49%;
+        background-color: cadetblue;
+        height: 240px;
         display: inline-block;
     }
-    #rightChoice{
-        width:49%;
-        background-color:cadetblue;
-        height:240px;
+
+    #rightChoice {
+        width: 49%;
+        background-color: cadetblue;
+        height: 240px;
         float: right;
         display: inline-block;
     }
 
-    .choice h1{
+    .choice h1 {
         margin: auto;
         position: relative;
         top: 50%;
@@ -23,8 +23,14 @@
         text-align: center;
         font-size: 80px
     }
-</style>
 
+    #audio-speaker img {
+        margin: 0 auto;
+        margin-bottom: 10px;
+        display: block;
+    }
+</style>
+<div id="audio-speaker"><img src="../../../images/audio.png"></div>
 <div id="leftChoice" class="choice">
     <h1>{{left}}</h1>
 </div>
