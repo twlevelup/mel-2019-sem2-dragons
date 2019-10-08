@@ -40,15 +40,6 @@ class IdentifyNumberPage extends BasePage {
 		let numLeft = random.shift();
 		let numRight = random.shift();
 
-		// function playSound(chosenValue) {
-		// 	if (chosenValue === 'left') {
-		// 		AudioHub.playSound(sounds[numLeft]);
-		// 	} else {
-		// 		AudioHub.playSound(sounds[numRight]);
-		// 	}
-		// }
-		// playSound(chosenValue);
-
 		return {
 			left: {
 				num: numLeft,

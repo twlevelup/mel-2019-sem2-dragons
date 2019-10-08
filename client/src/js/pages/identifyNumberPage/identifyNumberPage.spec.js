@@ -16,11 +16,12 @@ describe('The identify number Page', () => {
 			expect(page.right).toEqual(expect.any(Number));
 		});
 	});
-	describe('#pageWilload', () => {
+	describe('#pageDidLoad', () => {
 		it('should play the sound of the number', () => {
 			spyOn(AudioHub, 'playSound');
 			const page = new identifyNumberPage();
 			page.pageWillLoad();
+			page.pageDidLoad();
 			if (page.chosenValue === 'left') {
 				expect(AudioHub.playSound).toBeCalledWith(page.soundLeft);
 			} else {
