@@ -5,7 +5,7 @@
 	text-align: center;
 }
 
-#successImg {
+#failureImg {
 	position: absolute;
-	left: 40px;
+	left: 48px;
 }
