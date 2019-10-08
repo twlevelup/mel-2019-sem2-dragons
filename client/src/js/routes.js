@@ -5,6 +5,7 @@ const FourOhFour = require('./pages/404Page/404Page');
 const DemoPage = require('./pages/demoPage/demoPage');
 const SuccessPage = require('./pages/successPage/successPage');
 const failurePage = require('./pages/failurePage/failurePage');
+const IdentifyNumberPage = require('./pages/identifyNumberPage/identifyNumberPage');
 
 module.exports = {
   '/': HomePage,
@@ -13,5 +14,6 @@ module.exports = {
   '404': FourOhFour,
   'demo': DemoPage,
   'success': SuccessPage,
-  'failure': failurePage
+  'failure': failurePage,
+	'identifyNumber': IdentifyNumberPage
 };

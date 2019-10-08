@@ -1,6 +1,6 @@
 const BasePage = require('watch-framework').BasePage;
 class CustomBasePage extends BasePage {
-    bottomButtonEventDoubleClick() {
+    bottomButtonEventHold() {
         this.navigate('/');
       }
   
