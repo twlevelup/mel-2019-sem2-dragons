@@ -15,9 +15,9 @@ describe("#final", () => {
 });
 
 describe("#final", () => {
-  it("should render the congratulations!", () => {
+  it("should render the CONGRATS,KIDDO!", () => {
     const result = new finalPage();
-    expect(result.render()).toContain(`<h1>congratulations!</h1>`);
+    expect(result.render()).toContain(`<h1>CONGRATS,KIDDO!</h1>`);
   });
 });
 
