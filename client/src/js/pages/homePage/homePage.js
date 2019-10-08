@@ -51,7 +51,7 @@ class HomePage extends BasePage {
 	}
 
 	rightButtonEvent() {
-		this.navigate('contacts');
+		this.navigate('identifyNumber');
 	}
 
 	leftButtonEvent() {
@@ -66,9 +66,7 @@ class HomePage extends BasePage {
 		this.watchFace.scrollTop += 40;
 	}
 
-	faceButtonEvent() {
-		this.navigate('demo');
-	}
+	faceButtonEvent() {}
 }
 
 module.exports = HomePage;
