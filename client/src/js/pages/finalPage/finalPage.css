@@ -12,6 +12,10 @@
 	margin-right: auto;
 }
 
-/* .stars {
+.stars {
 	display: flex;
-} */
+	justify-content: center;
+}
+.star {
+	height: 50px;
+}
