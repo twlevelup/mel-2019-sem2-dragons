@@ -1,7 +1,7 @@
 const BasePage = require('../customBasePage/CustomBasePage');
 const AudioHub = require('watch-framework').AudioHub;
 
-const failureSound = '../../../sounds/failure-sound.mp3';
+const failureSound = './sounds/failure-sound.mp3';
 
 class FailurePage extends BasePage {
 	template = require('./failurePage.hbs');
@@ -12,7 +12,7 @@ class FailurePage extends BasePage {
 
 	pageDidLoad() {
 		this.playSound();
-  }
+    }
   
   faceButtonEvent()
   {
