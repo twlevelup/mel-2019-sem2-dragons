@@ -20,3 +20,12 @@ describe('#final', () => {
 		expect(result.render()).toContain(`<h1>CONGRATS,KIDDO!</h1>`);
 	});
 });
+
+describe('#final', ()=>{
+	it("should take the user to home on face button event", () =>{
+		const page = new finalPage();
+		spyOn(page, "navigate");
+		page.faceButtonEvent();
+		expect(page.navigate).toHaveBeenCalledWith('/');
+	});
+});
