@@ -3,14 +3,14 @@ const finalPage = require('./finalPage');
 describe('#final', () => {
 	it('should render the cat gif', () => {
 		const result = new finalPage();
-		expect(result.render()).toContain(`<img id="img" src="../../../images/cutecat1.gif" height="120">`);
+		expect(result.render()).toContain('cutecat1.gif');
 	});
 });
 
 describe('#final', () => {
 	it('should render the star gif', () => {
 		const result = new finalPage();
-		expect(result.render()).toContain(`<img class="star" src="../../../images/cutestar.gif" >`);
+		expect(result.render()).toContain('cutestar.gif');
 	});
 });
 

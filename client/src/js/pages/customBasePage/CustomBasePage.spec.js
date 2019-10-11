@@ -1,6 +1,8 @@
 const FourOhFourPage = require('../404Page/404Page');
-const HomePage = require('../homePage/homePage');
 const IdentifyNumberPage = require('../identifyNumberPage/identifyNumberPage');
+const SuccessPage = require('../successPage/successPage');
+const FailurePage = require('../failurePage/failurePage');
+const FinalPage = require('../finalPage/finalPage');
 
 describe('CustomBasePage', () => {
 	describe('#bottomButtonEventHold', () => {
@@ -9,16 +11,18 @@ describe('CustomBasePage', () => {
 				navigate: () => {}
 			};
 
-			for (var page in [
-				// new FourOhFourPage(props),
-				// new DemoPage(props),
-				// new IdentifyNumberPage(props),
-				// new HomePage(props)
-			]) {
-				spy = spyOn(page, 'navigate');
-
+			var test_pages = [
+				new FourOhFourPage(props),
+				new IdentifyNumberPage(props),
+				new FinalPage(props),
+				new SuccessPage(props),
+				new FailurePage(props)
+			];
+			for (var i = 0; i < test_pages.length; i++) {
+				var page = test_pages[i];
+				spyOn(page, 'navigate');
 				page.bottomButtonEventHold();
-				expect(spy).toHaveBeenCalledWith('/');
+				expect(page.navigate).toHaveBeenCalledWith('/');
 			}
 		});
 	});

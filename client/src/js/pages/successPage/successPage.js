@@ -1,4 +1,4 @@
-const BasePage = require('watch-framework').BasePage;
+const BasePage = require('../customBasePage/CustomBasePage');
 const AudioHub = require("watch-framework").AudioHub;
 const StorageHub = require('watch-framework').StorageHub;
 

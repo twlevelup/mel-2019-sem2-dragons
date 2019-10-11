@@ -16,3 +16,12 @@ describe('#failure sound', () => {
 		expect(AudioHub.playSound).toHaveBeenCalledTimes(1);
 	});
 });
+
+describe("#facebuttonevent", ()=> {
+	it("should take user to another question", () => {
+		const page = new failurePage();
+		spyOn(page, "navigate");
+		page.faceButtonEvent();
+		expect(page.navigate).toHaveBeenCalledWith("identifyNumber");
+	});
+});

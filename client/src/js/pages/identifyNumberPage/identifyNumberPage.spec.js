@@ -29,4 +29,49 @@ describe('The identify number Page', () => {
 			}
 		});
 	});
+
+	describe("#topbuttonevent", ()=> {
+		it("should play a number sound", ()=> {
+			const page = new identifyNumberPage();
+			page.pageWillLoad();
+			page.pageDidLoad();
+			spyOn(AudioHub, 'playSound');
+			page.topButtonEvent();
+			if (page.chosenValue === 'left') {
+				expect(AudioHub.playSound).toBeCalledWith(page.soundLeft);
+			} else {
+				expect(AudioHub.playSound).toBeCalledWith(page.soundRight);
+			}
+		});
+	});
+
+	describe("#rightbuttonevent", () =>{
+		it("should take the user to the success or failure page", () => {
+			const page = new identifyNumberPage();
+			page.pageWillLoad();
+			page.pageDidLoad();
+			spyOn(page, "navigate");
+			page.rightButtonEvent();
+			if (page.chosenValue === 'right') {
+				expect(page.navigate).toBeCalledWith("success");
+			} else {
+				expect(page.navigate).toBeCalledWith("failure");
+			}
+		});
+	});
+
+	describe("#leftbuttonevent", () =>{
+		it("should take the user to the success or failure page", () => {
+			const page = new identifyNumberPage();
+			page.pageWillLoad();
+			page.pageDidLoad();
+			spyOn(page, "navigate");
+			page.leftButtonEvent();
+			if (page.chosenValue === 'left') {
+				expect(page.navigate).toBeCalledWith("success");
+			} else {
+				expect(page.navigate).toBeCalledWith("failure");
+			}
+		});
+	});
 });

@@ -69,4 +69,13 @@ describe("HomePage", () => {
       expect(page.updateTimeDisplay).toHaveBeenCalledTimes(3);
     });
   });
+
+  describe('#facebuttonevent', () => {
+    it("should take user to the identify number page", () => {
+      const page = new HomePage();
+      spyOn(page, "navigate");
+      page.faceButtonEvent();
+      expect(page.navigate).toBeCalledWith("identifyNumber");
+    });
+  });
 });

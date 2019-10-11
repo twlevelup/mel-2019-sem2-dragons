@@ -7,5 +7,6 @@ describe('routes', () => {
 		expect(routes['failure']).toBeDefined();
 		expect(routes['404']).toBeDefined();
 		expect(routes['identifyNumber']).toBeDefined();
+		expect(routes['final']).toBeDefined();
 	});
 });
